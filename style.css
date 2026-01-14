@@ -61,19 +61,13 @@ header {
     text-decoration: underline;
 }
 
-.entries {
-    list-style: none;
-}
-
 .entry {
     display: block;
     text-decoration: none;
-    color: inherit;
-    line-height: var(--line-height);
+    color: var(--highlight-color);
+    line-height: 1.5;
     margin-block-end: var(--line-height);
     position: relative;
-    will-change: transform, opacity, filter;
-    transition: all 0.4s ease;
 }
 
 .entry-title {
@@ -89,33 +83,5 @@ header {
     display: block;
     font-size: 0.95rem;
     opacity: 0.7;
-}
-
-.entries:hover .entry,
-.entries:focus-within .entry {
-    opacity: 0.2;
-    filter: blur(1px);
-}
-
-.entries .entry:hover,
-.entries .entry:focus {
-    opacity: 1;
-    filter: blur(0);
-    color: var(--highlight-color);
-    transform: translateX(10px);
-    outline: none;
-}
-
-.entry-title::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: var(--highlight-color);
-    transition: width 0.3s ease;
-}
-
-.entry:hover .entry-title::after,
-.entry:focus .entry-title::after {
-    width: 100%;
+    margin-top: 0.25rem;
 }
